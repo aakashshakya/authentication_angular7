@@ -1,0 +1,26 @@
+[
+    {
+        "id":1,
+        "username":"chandrabrt",
+        "password":"9824376278",
+        "firstName":"chandra",
+        "lastName":"khadka",
+        "token":"asddhr43hh453h54h"
+    },
+    {
+        "id":2,
+        "username":"manishbrt",
+        "password":"9824376278",
+        "firstName":"manish",
+        "lastName":"Lamsal",
+        "token":"asddhr43hh453h5sds4h"
+    },
+    {
+        "id":3,
+        "username":"hari123",
+        "password":"9824376278",
+        "firstName":"Hari",
+        "lastName":"khadka",
+        "token":"asddhr43hh45gfdgd3h54h"
+    }
+]
