@@ -4,9 +4,9 @@
 
 export const environment = {
   production: false,
-  // apiUrl: 'http://localhost:4000'
+  apiUrl: 'http://localhost:3000'
   // apiUrl:'/assets/data/user.json'
-  apiUrl:'http://fakerestapi.azurewebsites.net/api'
+  // apiUrl:'http://fakerestapi.azurewebsites.net/api'
 
 };
 

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserService, AuthenticationService } from '../_services';
 import { User } from '../_models';
 import { Subscription } from 'rxjs';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -15,7 +16,7 @@ export class HomeComponent implements OnInit {
   currentUserSubscription: Subscription;
 
   users: User[] = [];
-  constructor(private userService:UserService,private authenticationService:AuthenticationService) { 
+  constructor(private userService:UserService,private authenticationService:AuthenticationService, private router:Router) { 
     this.currentUserSubscription = this.authenticationService.currentUser.subscribe(user=>{
       this.currentUser = user;
     });
@@ -25,10 +26,10 @@ export class HomeComponent implements OnInit {
     this.getAllUser();
   }
 
-  ngOnDestroy() {
-    // unsubscribe to ensure no memory leaks
-    this.currentUserSubscription.unsubscribe();
-  }
+  // ngOnDestroy() {
+  //   // unsubscribe to ensure no memory leaks
+  //   this.currentUserSubscription.unsubscribe();
+  // }
 
   getAllUser(){
     this.userService.getAll()
@@ -51,6 +52,9 @@ export class HomeComponent implements OnInit {
       console.log("data not deleted",error)
     });
   }
+    updateUser(user:User){
+        this.router.navigate(['/update-user',user.id])
+    }
 }
 
 

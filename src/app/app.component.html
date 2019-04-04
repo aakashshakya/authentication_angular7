@@ -1,9 +1,24 @@
 <!-- nav -->
-<nav class="navbar navbar-expand navbar-light" style="background-color: #b3ddfd;">
+<nav class="navbar navbar-expand navbar-light" style="background-color: #b3ddfd;" *ngIf="currentUser">
     <div class="navbar-nav">
         <a class="nav-item nav-link" routerLink="/">Home</a>
-        <a class="nav-item nav-link" (click)="logout()" >Logout</a>
+        <a class="nav-item nav-link">Blog</a>
+        <a class="nav-item nav-link">About</a>
+
+        <a class="nav-item nav-link dropdown-toggle " href="#"  id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <img width="23" height="23" class="rounded-circle "
+             src="https://assets.gitlab-static.net/uploads/-/system/user/avatar/1766357/avatar.png?width=23">
+          </a>
+        
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item" href="#"><strong>{{currentUser.firstName+" "+ currentUser.lastName}}</strong></a>
+            <a class="dropdown-item" href="#"><i class="fas fa-user"></i> @{{currentUser.username}}</a>
+            <a class="dropdown-item" href="#"><i class="fas fa-cog"></i> settings</a>
+            <a class="dropdown-item" href="#"><i class="fas fa-user-circle"></i> profile</a>
+            <a class = "dropdown-item" (click)="logout()"><i class="fas fa-sign-out-alt"></i> logout</a>
+          </div>
     </div>
+    
 </nav>
 
 <!-- main app container -->

@@ -5,10 +5,4 @@ export class User {
     firstName: string;
     lastName: string;
     token: string;
-
-    // ID: number;
-    // UserName:string;
-    // Password:string;
-
-    
 }

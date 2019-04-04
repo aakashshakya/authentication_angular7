@@ -35,19 +35,22 @@ export class UserService {
   // }
 
   getAll():Observable<User[]>{
-    return this.http.get<User[]>(`${environment.apiUrl}/Users`)
+    return this.http.get<User[]>(`${environment.apiUrl}/users`)
   }
 
   getById(id:number):Observable<User>{
-    return this.http.get<User>(`${environment.apiUrl}/Users/${id}`)
+    return this.http.get<User>(`${environment.apiUrl}/users/${id}`)
 
   }
   register(user:User):Observable<User>{
-    return this.http.post<User>(`${environment.apiUrl}/Users`, user)
+    return this.http.post<User>(`${environment.apiUrl}/users/register`, user)
   }
 
+  // update(id:number,user:User):Observable<User>{
+  //   return this.http.put<User>(`${environment.apiUrl}/users/${id}`,user)
+  // }
   update(id:number,user:User):Observable<User>{
-    return this.http.put<User>(`${environment.apiUrl}/Users/${id}`,user)
+    return this.http.put<User>(`${environment.apiUrl}/users/${id}`,user)
   }
 
   // delete(id:number):Observable<User>{
@@ -57,7 +60,7 @@ export class UserService {
   //   );
   // }
   delete(id:number):Observable<User>{
-    return this.http.delete<User>(`${environment.apiUrl}/Users/${id}`);
+    return this.http.delete<User>(`${environment.apiUrl}/users/${id}`);
   }
 
   // handleError(error:HttpErrorResponse){
