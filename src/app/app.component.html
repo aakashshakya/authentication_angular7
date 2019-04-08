@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand navbar-light" style="background-color: #b3ddfd;" *ngIf="currentUser">
     <div class="navbar-nav">
         <a class="nav-item nav-link" routerLink="/">Home</a>
-        <a class="nav-item nav-link">Blog</a>
+        <a class="nav-item nav-link" routerLink="/admin"*ngIf="isAdmin">Admin</a>
         <a class="nav-item nav-link">About</a>
 
         <a class="nav-item nav-link dropdown-toggle " href="#"  id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

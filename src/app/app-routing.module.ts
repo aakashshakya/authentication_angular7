@@ -5,6 +5,8 @@ import { AuthGuard } from './_guards/auth.guard';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { UserupdateComponent } from './userupdate/userupdate.component';
+import { AdminComponent } from './admin/admin.component';
+import { Role } from './_models/role';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, canActivate: [AuthGuard] },
@@ -14,7 +16,15 @@ const routes: Routes = [
     {path:'update-user/:id',component:UserupdateComponent},
 
     // otherwise redirect to home
-    { path: '**', redirectTo: '' }
+    { path: '**', redirectTo: '' },
+    {
+      path:'admin',
+      component:AdminComponent,
+      canActivate:[AuthGuard],
+      data:{
+        roles:[Role.Admin]
+      }
+    }
 ];
 
 @NgModule({

@@ -1,24 +1,9 @@
 {
   "users": [
     {
-      "id": 2
-    },
-    {
-      "id": 4
-    },
-    {
-      "id": 5
-    },
-    {
-      "id": 6
-    },
-    {
       "username": "chandrabrt",
       "password": "testtest",
       "id": 7
-    },
-    {
-      "id": 8
     },
     {
       "username": "asdf1234",
@@ -26,18 +11,11 @@
       "id": 9
     },
     {
-      "firstName": "asdsad",
-      "lastName": "adasd",
-      "username": "haribrt",
-      "password": "hari1234",
+      "firstName": "chandra",
+      "lastName": "asdasd",
+      "username": "adasd",
+      "password": "adasdsada",
       "id": 10
-    },
-    {
-      "firstName": "sdf",
-      "lastName": "sdf",
-      "username": "chandrabrt",
-      "password": "9824376278",
-      "id": 11
     }
   ]
 }

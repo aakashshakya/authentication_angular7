@@ -26,10 +26,10 @@ export class HomeComponent implements OnInit {
     this.getAllUser();
   }
 
-  // ngOnDestroy() {
-  //   // unsubscribe to ensure no memory leaks
-  //   this.currentUserSubscription.unsubscribe();
-  // }
+  ngOnDestroy() {
+    // unsubscribe to ensure no memory leaks
+    this.currentUserSubscription.unsubscribe();
+  }
 
   getAllUser(){
     this.userService.getAll()

@@ -43,7 +43,7 @@ export class UserService {
 
   }
   register(user:User):Observable<User>{
-    return this.http.post<User>(`${environment.apiUrl}/users/register`, user)
+    return this.http.post<User>(`${environment.apiUrl}/users/`, user)
   }
 
   // update(id:number,user:User):Observable<User>{

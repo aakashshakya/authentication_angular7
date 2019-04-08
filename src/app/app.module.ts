@@ -14,6 +14,7 @@ import { JwtInterceptor } from './_helpers/jwt.interceptor';
 import { ErrorInterceptor } from './_helpers';
 import { fakeBackendProvider } from './_helpers/fake-backend';
 import { UserupdateComponent } from './userupdate/userupdate.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { UserupdateComponent } from './userupdate/userupdate.component';
     LoginComponent,
     RegisterComponent,
     AlertComponent,
-    UserupdateComponent
+    UserupdateComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,8 @@ import { UserupdateComponent } from './userupdate/userupdate.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [{
+  providers: [
+    {
     provide:HTTP_INTERCEPTORS,
     useClass:AppInterceptorService,
     multi: true
@@ -40,7 +43,7 @@ import { UserupdateComponent } from './userupdate/userupdate.component';
   { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
 
         // // provider used to create fake backend
-        fakeBackendProvider
+        // fakeBackendProvider
 ],
   bootstrap: [AppComponent]
 })
